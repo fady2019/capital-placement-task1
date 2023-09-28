@@ -1,0 +1,10 @@
+.add-question-btn {
+    gap: 16px;
+    padding-top: 32px;
+}
+
+.question-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}

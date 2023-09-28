@@ -1,0 +1,19 @@
+.textarea {
+    width: 100%;
+    background-color: #fff;
+    padding: 22px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    min-height: 150px;
+    max-height: 250px;
+    resize: vertical;
+    outline: none;
+}
+
+textarea,
+textarea::placeholder {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: #979797;
+}

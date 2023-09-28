@@ -1,0 +1,15 @@
+.video-question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.video-duration-metadata {
+    display: flex;
+    gap: 12px;
+}
+
+.video-duration-metadata > * {
+    flex: 0 0 calc(calc(100% - 12px) / 2);
+}

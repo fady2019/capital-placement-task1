@@ -1,0 +1,10 @@
+.question-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 32px;
+}
+
+.question-form:not(:last-child) {
+    border-bottom: 1px solid #c4c4c4;
+}

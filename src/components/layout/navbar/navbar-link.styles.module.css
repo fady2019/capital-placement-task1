@@ -1,0 +1,45 @@
+.navbar__link {
+    position: relative;
+    padding-block: 18px;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #fff;
+    z-index: 0;
+}
+
+.navbar__link:not(.navbar__link--active):hover {
+    background-color: #f1f1f1;
+}
+
+.navbar__link a {
+    display: block;
+    padding: 12px;
+    min-width: 200px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar__link:not(:last-of-type, .navbar__link--active, :has(+ .navbar__link--active)) a {
+    border-right: 1px solid #c4c4c4;
+}
+
+.navbar__link--active {
+    background-color: #00635b;
+    color: #fff;
+    z-index: 1;
+}
+
+.navbar__link--active:not(:last-of-type)::after {
+    --box-size: 20px;
+    content: '';
+    position: absolute;
+    top: calc(50% - calc(var(--box-size) * 0.12));
+    right: calc(var(--box-size) * -0.12);
+    width: var(--box-size);
+    height: var(--box-size);
+    background-color: #00635b;
+    transform: rotate(45deg) translateY(-50%);
+    z-index: -1;
+}

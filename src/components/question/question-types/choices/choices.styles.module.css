@@ -1,0 +1,38 @@
+.choices-container {
+    margin-bottom: 32px;
+}
+
+.choices-container label {
+    margin-left: 35px;
+    padding-bottom: 12px;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.choice__reorder-btn,
+.choice__add-btn {
+    all: unset;
+    display: flex;
+}
+
+.choice__reorder-btn {
+    cursor: grab;
+}
+
+.choice__add-btn {
+    padding: 4px;
+    cursor: pointer;
+}
