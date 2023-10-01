@@ -61,7 +61,7 @@ const VideoQuestion: React.FC<{
                 <SelectMenu
                     label="in (sec/min)"
                     options={durationFormats}
-                    defaultValue={''}
+                    defaultValue={question.videoMaxDurationFormat}
                     required={true}
                     onChange={(format) => {
                         changeHandler({
