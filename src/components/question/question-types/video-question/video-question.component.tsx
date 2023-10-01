@@ -4,6 +4,7 @@ import FormItem from '../../../ui/form-item/form-item.component';
 import Input from '../../../ui/input/input.component';
 import Textarea from '../../../ui/textarea/textarea.component';
 import SelectMenu from '../../../ui/select-menu/select-menu.component';
+import QuestionTextInput from '../question-inputs/question-text-input.component';
 
 import { EVideoQuestionDurationFormat, IQuestion } from '../../../../models/app-form/app-form-question.model';
 
@@ -22,19 +23,7 @@ const VideoQuestion: React.FC<{
 
     return (
         <FormItem className={classes['video-question']}>
-            <FormItem>
-                <label>Question</label>
-                <Input
-                    type="text"
-                    placeholder="Type here"
-                    defaultValue={question.question}
-                    onChange={(e) => {
-                        changeHandler({
-                            question: e.target.value,
-                        });
-                    }}
-                />
-            </FormItem>
+            <QuestionTextInput questionText={question.question} changeHandler={changeHandler} />
 
             <Textarea
                 placeholder="Additional Information"

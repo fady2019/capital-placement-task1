@@ -2,8 +2,8 @@ import React from 'react';
 
 import FormItem from '../../ui/form-item/form-item.component';
 import Input from '../../ui/input/input.component';
-import Checkbox from '../../ui/checkbox/checkbox.component';
-import Choices from './choices/choices.component';
+import QuestionTextInput from './question-inputs/question-text-input.component';
+import QuestionChoicesInputs from './question-inputs/question-choices-inputs.component';
 
 import { IQuestion } from '../../../models/app-form/app-form-question.model';
 
@@ -15,37 +15,12 @@ const MultipleChoiceQuestion: React.FC<{
 
     return (
         <>
-            <FormItem>
-                <label>Question</label>
-                <Input
-                    type="text"
-                    placeholder="Type here"
-                    defaultValue={question.question}
-                    onChange={(e) => {
-                        changeHandler({
-                            question: e.target.value,
-                        });
-                    }}
-                />
-            </FormItem>
+            <QuestionTextInput questionText={question.question} changeHandler={changeHandler} />
 
-            <Choices
+            <QuestionChoicesInputs
                 choices={question.choices}
-                changeHandler={(choices) => {
-                    changeHandler({
-                        choices,
-                    });
-                }}
-            />
-
-            <Checkbox
-                isChecked={question.other!}
-                label="Enable “Other” option"
-                togglingHandler={(checked) => {
-                    changeHandler({
-                        other: checked || false,
-                    });
-                }}
+                enableOtherOption={question.other}
+                changeHandler={changeHandler}
             />
 
             <FormItem style={{ marginTop: '32px' }}>
